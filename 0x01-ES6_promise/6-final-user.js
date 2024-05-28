@@ -7,11 +7,11 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
 
   return Promise.allSettled([sign, upload])
     .then((results) => results.map((result) => ({
-      status: 'fulfilled',
+      status: result.status,
       value: result,
     })))
     .catch((error) => [{
-      status: 'rejected',
+      status: result.status,
       value: error,
     }]);
 }
