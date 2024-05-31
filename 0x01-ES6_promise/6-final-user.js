@@ -2,6 +2,7 @@ import signUpUser from './4-user-promise';
 import uploadPhoto from './5-photo-reject';
 
 export default function handleProfileSignup(firstName, lastName, fileName) {
+  // call the functions
   const sign = signUpUser(firstName, lastName);
   const upload = uploadPhoto(fileName);
 
