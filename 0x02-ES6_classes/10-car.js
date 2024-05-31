@@ -27,6 +27,9 @@ export default class Car {
   }
 
   cloneCar() {
+    if (!(this instanceof Car)) {
+      throw new TypeError('cloneCar can only be called on instances of Car');
+    }
     return new this.constructor(this._brand, this._motor, this._color);
   }
 }
