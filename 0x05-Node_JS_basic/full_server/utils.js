@@ -1,4 +1,5 @@
-const fs = require('fs');
+// const fs = require('fs');
+import fs from 'fs';
 
 function readDatabase(path) {
   console.log(`path: ${path}`);
@@ -46,4 +47,5 @@ function readDatabase(path) {
   });
 }
 
-module.exports = readDatabase;
+// module.exports = readDatabase;
+export default readDatabase;
