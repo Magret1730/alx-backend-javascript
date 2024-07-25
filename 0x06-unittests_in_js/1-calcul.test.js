@@ -111,12 +111,12 @@ describe("calculate number function test", function() {
         });
     });
 
-    // describe('checks the NaN number', function () {
-    //     it('should throw a TypeError when one of the arguments is NaN', () => {
-    //         assert.throws(() => calculateNumber('SUM', NaN, 2), TypeError);
-    //         assert.throws(() => calculateNumber('SUBTRACT', 2, NaN), TypeError);
-    //         assert.throws(() => calculateNumber('DIVIDE', NaN, 2), TypeError);
-    //         assert.throws(() => calculateNumber('shhh', NaN, 3), TypeError);
-    //     });
-    // });
+    describe('checks the NaN number', function () {
+        it('should throw a TypeError when one of the arguments is NaN', () => {
+            assert.throws(() => calculateNumber('SUM', NaN, 2), "[Function: TypeError]");
+            assert.throws(() => calculateNumber('SUBTRACT', 2, NaN), "[Function: TypeError]");
+            assert.throws(() => calculateNumber('DIVIDE', NaN, 2), "[Function: TypeError]");
+            assert.throws(() => calculateNumber('shhh', NaN, 3), "[Function: TypeError]");
+        });
+    });
 });
