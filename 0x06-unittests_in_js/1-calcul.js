@@ -10,10 +10,13 @@ function calculateNumber(type, a, b) {
         return (new_a - new_b);
     } else if (type === 'DIVIDE') {
         if (new_b === 0) {
-            return new TypeError('Error')
+            throw TypeError('Error')
         }
         return (new_a / new_b);
     }
 };
 
 module.exports = calculateNumber;
+
+// const ans = calculateNumber('SUM', 1.4, 4.5);
+// console.log(ans);
